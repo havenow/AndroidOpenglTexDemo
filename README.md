@@ -1,0 +1,2 @@
+# AndroidOpenglTexDemo
+Android层面使用OpenglES2.0进行纹理贴图Demo
