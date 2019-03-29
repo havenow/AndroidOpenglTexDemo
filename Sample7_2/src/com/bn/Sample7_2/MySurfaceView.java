@@ -37,6 +37,17 @@ class MySurfaceView extends GLSurfaceView
         { 
         	//清除深度缓冲与颜色缓冲
             GLES20.glClear( GLES20.GL_DEPTH_BUFFER_BIT | GLES20.GL_COLOR_BUFFER_BIT);
+			
+			/*if (romLoaded) {
+            	Bitmap localBitmap = Bitmap.createBitmap(240, 160, Bitmap.Config.RGB_565);
+	            EmulatorGL20View.e.position(0);
+	            localBitmap.copyPixelsFromBuffer(EmulatorGL20View.e); 
+                GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, localBitmap, 0);
+                //GLUtils.texSubImage2D(GLES20.GL_TEXTURE_2D, 0, 0, 0, localBitmap);
+                
+                localBitmap.recycle();
+			}*/
+			
             //绘制当前纹理矩形
             texRect[trIndex].drawSelf(currTextureId);             
         }  
